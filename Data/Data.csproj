@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9738DDFF-E869-41BF-A933-427D6C6357A7}</ProjectGuid>
+    <ProjectGuid>{B6FD407F-5001-4709-81E0-1A98E038FC46}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YamDocumentManagementSystem.Core</RootNamespace>
-    <AssemblyName>YamDocumentManagementSystem.Core</AssemblyName>
+    <RootNamespace>YamDocumentManagementSystem.Data</RootNamespace>
+    <AssemblyName>YamDocumentManagementSystem.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -30,7 +30,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DryIoc, Version=2.9.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DryIoc.dll.2.9.7\lib\net45\DryIoc.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PetaPoco, Version=5.1.228.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PetaPoco.Core.Compiled.5.1.228\lib\net45\PetaPoco.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,22 +50,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataModule.cs" />
+    <Compile Include="Entities\Filing\Color\Color.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\Base\IAddRepository.cs" />
+    <Compile Include="Repositories\Base\IBulkAddRepository.cs" />
+    <Compile Include="Repositories\Base\IBulkDeleteRepository.cs" />
+    <Compile Include="Repositories\Base\IBulkGetRepository.cs" />
+    <Compile Include="Repositories\Base\IBulkUpdateRepository.cs" />
+    <Compile Include="Repositories\Base\IDeleteRepository.cs" />
+    <Compile Include="Repositories\Base\IGetRepository.cs" />
+    <Compile Include="Repositories\Base\IDatabaseRepository.cs" />
+    <Compile Include="Repositories\Base\IUpdateRepository.cs" />
+    <Compile Include="Repositories\Factories\DatabaseFactory.cs" />
+    <Compile Include="Repositories\Factories\IDatabaseFactory.cs" />
+    <Compile Include="Repositories\Filing\Color\ColorRepository.cs" />
+    <Compile Include="Repositories\Filing\Color\IColorRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Documents\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Data\Data.csproj">
-      <Project>{b6fd407f-5001-4709-81e0-1a98e038fc46}</Project>
-      <Name>Data</Name>
+    <ProjectReference Include="..\Configuration\Configuration.csproj">
+      <Project>{4882DF9C-39FA-474D-A4C0-2835B34764BC}</Project>
+      <Name>Configuration</Name>
     </ProjectReference>
     <ProjectReference Include="..\Helpers\Helpers.csproj">
       <Project>{0c0d9862-1742-4805-9ecb-bba6af31eff5}</Project>
       <Name>Helpers</Name>
     </ProjectReference>
     <ProjectReference Include="..\Types\Types.csproj">
-      <Project>{34347d0b-42ae-4a6c-ad07-6a76487729f1}</Project>
+      <Project>{34347D0B-42AE-4A6C-AD07-6A76487729F1}</Project>
       <Name>Types</Name>
     </ProjectReference>
   </ItemGroup>
