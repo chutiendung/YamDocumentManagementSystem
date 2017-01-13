@@ -1,5 +1,5 @@
 # Yam Document Management System
-###### An OpenSource Document Management System
+###### An Open Source Document Management System
 
 YDMS is to become a lightweight, customizable DMS for businesses. The goal is to reduce expense and the bloat that comes with other commercial solutions.
 
