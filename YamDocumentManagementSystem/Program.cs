@@ -1,8 +1,8 @@
-﻿namespace YamDocumentManagementSystem
+﻿namespace YamDocumentManagementSystemApiTestClient
 {
-    internal class Program
+    public static class Program
     {
-        private static void Main(string[] args)
+        public static void Main()
         {
         }
     }

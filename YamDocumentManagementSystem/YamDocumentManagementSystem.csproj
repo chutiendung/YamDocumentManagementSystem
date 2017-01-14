@@ -7,8 +7,8 @@
     <ProjectGuid>{430376D3-B203-4E69-BAC3-5605A9D978CC}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>YamDocumentManagementSystem</RootNamespace>
-    <AssemblyName>YamDocumentManagementSystem</AssemblyName>
+    <RootNamespace>YamDocumentManagementSystemApiTestClient</RootNamespace>
+    <AssemblyName>YamDocumentManagementSystemApiTestClient</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("YamDocumentManagementSystem")]
+[assembly: AssemblyTitle("Yam Document Management System API Test Client")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Timothy M. Stepanski")]
-[assembly: AssemblyProduct("YamDocumentManagementSystem")]
+[assembly: AssemblyProduct("YamDocumentManagementSystemAPITestClient")]
 [assembly: AssemblyCopyright("Copyright © Timothy M. Stepanski 2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
