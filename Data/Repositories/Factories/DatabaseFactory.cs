@@ -1,6 +1,7 @@
 ﻿using System.Data;
 using PetaPoco;
 using YamDocumentManagementSystem.Configuration.Data;
+using YamDocumentManagementSystem.Types.General;
 
 namespace YamDocumentManagementSystem.Data.Repositories.Factories
 {
@@ -15,6 +16,10 @@ namespace YamDocumentManagementSystem.Data.Repositories.Factories
         private static IDatabase GetDatabase(IDatabaseConnectionInfo databaseConnectionInfo,
             IsolationLevel isolationLevel)
         {
+            Guard.ThrowIfNull(databaseConnectionInfo, nameof(databaseConnectionInfo));
+            Guard.ThrowIfNullOrWhitespace(databaseConnectionInfo.ConnectionString,
+                nameof(databaseConnectionInfo.ConnectionString));
+
             var givenProviderName = databaseConnectionInfo.ProviderName;
 
             var providerName = string.IsNullOrWhiteSpace(givenProviderName)
