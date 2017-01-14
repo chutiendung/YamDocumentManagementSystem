@@ -121,11 +121,15 @@
   <ItemGroup>
     <Folder Include="Properties" />
     <Folder Include="Security\" />
+    <Folder Include="Tables" />
+    <Folder Include="Schemas" />
   </ItemGroup>
   <ItemGroup>
     <None Include="ConfigurationDatabase.localV13.publish.xml" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="Security\Permissions.sql" />
+    <Build Include="Tables\YDMS.Colors.sql" />
+    <Build Include="Schemas\YDMS.sql" />
   </ItemGroup>
 </Project>
